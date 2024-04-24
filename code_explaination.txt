@@ -1,0 +1,59 @@
+This is a Python script that implements a voice assistant, similar to Amazon's Alexa or Google Assistant. The script uses various libraries and APIs to provide functionality such as speech recognition, text-to-speech synthesis, web browsing, Wikipedia searches, Wolfram Alpha computations, and note-taking.
+
+Here's a breakdown of the code:
+
+Importing Libraries
+
+The script starts by importing various libraries, including:
+
+datetime for date and time manipulation
+speech_recognition for speech recognition
+pyttsx3 for text-to-speech synthesis (local)
+google.cloud.texttospeech for text-to-speech synthesis (Google Cloud)
+webbrowser for web browsing
+wikipedia for Wikipedia searches
+wolframalpha for Wolfram Alpha computations
+keyboard for keyboard input
+math for mathematical operations
+openai for OpenAI API interactions
+dotenv for loading environment variables from a .env file
+pygame for audio playback
+Loading Credentials
+
+The script loads credentials from a .env file using the dotenv library. This is likely for API keys and other sensitive information.
+
+Setting Up Speech Recognition
+
+The script sets up speech recognition using the speech_recognition library. It defines a function parseCommand() that listens for user input, recognizes speech, and returns the recognized text.
+
+Setting Up Text-to-Speech Synthesis
+
+The script sets up text-to-speech synthesis using either the local pyttsx3 library or the Google Cloud Text-to-Speech API. It defines a function speak() that takes a text input and synthesizes it into speech.
+
+Configuring Browser
+
+The script configures the web browser using the webbrowser library. It sets the path to the Firefox browser and registers it as the default browser.
+
+Wolfram Alpha Client
+
+The script sets up a Wolfram Alpha client using the wolframalpha library. It defines a function search_wolframalpha() that takes a query input and returns the result from Wolfram Alpha.
+
+OpenAI Client
+
+The script sets up an OpenAI client using the openai library. It defines a function query_openai() that takes a prompt input and returns the response from OpenAI.
+
+Main Loop
+
+The script enters an infinite loop, where it:
+
+Listens for user input using the parseCommand() function.
+Parses the input command and executes the corresponding action.
+Supports various commands, including:
+say: speaks the input text.
+insight: queries OpenAI for an insight.
+go to: opens a web page.
+wikipedia: searches Wikipedia.
+compute or computer: computes a result using Wolfram Alpha.
+log: takes a note.
+exit: exits the program.
+The script uses various libraries and APIs to provide a range of functionality, making it a comprehensive voice assistant.
